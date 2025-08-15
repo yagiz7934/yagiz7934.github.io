@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>İyi ki Doğdun — Senin İçin</title>
+
+  <!-- Meta -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Sana özel, minimal ve zarif bir doğum günü deneyimi.">
+  <meta property="og:title" content="İyi ki Doğdun — Senin İçin">
+  <meta property="og:description" content="Sana özel, minimal ve zarif bir doğum günü deneyimi.">
+  <meta property="og:type" content="website">
+
+  <link rel="preload" as="audio" href="assets/music.mp3">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sabit üst bar -->
+  <header class="site-header" role="banner" aria-label="Üst menü">
+    <div class="container">
+      <div class="brand">
+        <!-- Applevari sade logotype — istersen SVG logo ekleyebilirsin -->
+        <span class="dot" aria-hidden="true"></span>
+        <span class="brand-text">for • <span id="herName">Betül</span></span>
+      </div>
+      <nav class="nav" aria-label="Hızlı eylemler">
+        <button id="musicToggle" class="ghost-btn" aria-pressed="false" aria-label="Müziği aç/kapat">
+          ♫
+        </button>
+        <button id="confettiBtn" class="primary-btn" aria-label="Kutla">Kutla</button>
+      </nav>
+    </div>
+    <div class="hairline"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Giriş">
+    <div class="hero-inner container">
+      <h1 class="display reveal">İyi ki doğdun</h1>
+      <h2 class="subtitle reveal">Dünyanın en güzel rastlantısına…</h2>
+      <p class="lede reveal">
+        Seninle, sıradan bir gün bile hatırlanmaya değer oluyor.
+      </p>
+
+      <div class="stat-cards">
+        <article class="stat-card reveal" aria-label="Beraber geçen gün">
+          <div class="stat-number" id="daysTogether">—</div>
+          <div class="stat-label">birlikte gün</div>
+        </article>
+        <article class="stat-card reveal" aria-label="Favori gülüş">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">gülüş sebebim</div>
+        </article>
+        <article class="stat-card reveal" aria-label="Bugün">
+          <div class="stat-number" id="todayStr">—</div>
+          <div class="stat-label">bugün</div>
+        </article>
+      </div>
+
+      <a href="#story" class="scroll-indicator" aria-label="Hikâyeye kaydır">
+        Aşağı kaydır
+        <span class="chevron" aria-hidden="true">⌄</span>
+      </a>
+    </div>
+    <div class="hero-gradient" aria-hidden="true"></div>
+  </section>
+
+  <!-- STORY (timeline) -->
+  <section id="story" class="section container" aria-label="Hikâyemiz">
+    <header class="section-header">
+      <h3 class="eyebrow reveal">Hikâyemiz</h3>
+      <h2 class="section-title reveal">En sevdiğim 4 an</h2>
+      <p class="section-desc reveal">Bazı anlar var ki, zamanı yavaşlatıyor.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline-item reveal">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-content">
+          <h4>İlk “merhaba”</h4>
+          <p>Gözlerinin ışığıyla tanıştığım o an.</p>
+          <time datetime="2024-05-12">12 Mayıs 2024</time>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-content">
+          <h4>Uzun yürüyüş</h4>
+          <p>Konuşmalar bittiğinde bile sessizliğin güzel olduğu an.</p>
+          <time datetime="2024-08-02">2 Ağustos 2024</time>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-content">
+          <h4>Kahkaha krizi</h4>
+          <p>İkimizin de gözünden yaş gelene kadar.</p>
+          <time datetime="2025-02-10">10 Şubat 2025</time>
+        </div>
+      </li>
+      <li class="timeline-item reveal">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-content">
+          <h4>Bugün</h4>
+          <p>Bir dilek tut: Ben varım.</p>
+          <time id="todayTime">—</time>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section container" aria-label="Anılar">
+    <header class="section-header">
+      <h3 class="eyebrow reveal">Anılar</h3>
+      <h2 class="section-title reveal">Küçük bir vitrin</h2>
+      <p class="section-desc reveal">Fotoğrafları klasöre at, otomatik yüklensin.</p>
+    </header>
+
+    <div class="masonry" id="masonry">
+      <!-- Örnek placeholder görseller (değiştir) -->
+      <img class="reveal" src="assets/1.jpg" alt="Birlikte gülüşümüz">
+      <img class="reveal" src="assets/2.jpg" alt="Kahve molası">
+      <img class="reveal" src="assets/3.jpg" alt="Gün batımı">
+      <img class="reveal" src="assets/4.jpg" alt="Yol hikâyesi">
+      <img class="reveal" src="assets/5.jpg" alt="Anı">
+      <img class="reveal" src="assets/6.jpg" alt="Anı">
+    </div>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" class="section container letter" aria-label="Mektup">
+    <header class="section-header">
+      <h3 class="eyebrow reveal">Birkaç kelime</h3>
+      <h2 class="section-title reveal">Sana yazdım</h2>
+    </header>
+
+    <article class="paper reveal" aria-label="Mektup kağıdı">
+      <p>
+        Seninle öğrendim; mutluluk büyük bir şey değilmiş, küçük anların toplamıymış.
+        Her gün, yeniden iyi ki doğdun demek istiyorum. İyi ki varsın.
+      </p>
+      <p>
+        Dileğim şu: Bugün ne kadar güzelsen, yarın o güzelliğe bir “iyi ki” daha eklensin.
+      </p>
+      <p class="sign">— Yağız</p>
+    </article>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta container" aria-label="Kapanış">
+    <div class="cta-card reveal">
+      <h2>Bir dilek tut ✨</h2>
+      <p>Hazır mısın? Butona bas ve gökyüzü confetti ile dolsun.</p>
+      <div class="cta-actions">
+        <button id="finalConfetti" class="primary-btn">Mutlu Yıllar!</button>
+        <a class="ghost-btn" href="#hero">Başa dön</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="yearNow"></span> Sadece senin için yapıldı.</p>
+    </div>
+  </footer>
+
+  <!-- Audio (kullanıcı kontrolü ile) -->
+  <audio id="bgm" src="assets/music.mp3" preload="auto"></audio>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
